@@ -1,112 +1,184 @@
 import Image from 'next/image'
-
+import './page.scss'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="main">
+      <div className='content'>
+        <header className='header contentMaxWidth'>
+          <div>
+            <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
+          </div>
+        </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className='lookingFor contentMaxWidth'>
+          <h3 className='title'>Are you looking for</h3>
+          <div className='options flex ' >
+            <ul className='selection left'>
+              <div className='relative mb-[40px]'>
+                <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
+                <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>Cloud gaming</p>
+              </div>
+              <li>Play game on any devices</li>
+              <li>From 10$ per month</li>
+              <li>Play game instantly</li>
+              <li>Available in Vietnam</li>
+            </ul>
+            <ul className='selection right'>
+              <div className='relative mb-[40px]'>
+                <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
+                <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
+              </div>
+              <li>Consultant CloudPc/gaming service</li>
+              <li>Browser application</li>
+              <li>Streaming protocol</li>
+              <li>Virtualization technology</li>
+            </ul>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className='enterprise'>
+          <div className='introduce contentMaxWidth '>
+            <div className="left">
+              <div className='content'>
+                <div>
+                  <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
+                  <p className='text-white text-[30px]'>
+                    Are you building application which have
+                    ultra low latency?
+                  </p>
+                  <a href="">Let us help you</a>
+                </div>
+              </div>
+              <div className='content'>
+                <div>
+                  <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
+                  <ul className='flex items-start gap-[8px] mt-[80px]'>
+                    <li>Virtual machine?</li>
+                    <li>Virtual machine?</li>
+                    <li>Virtual machine?</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="right">
+              <div className='content z-10'>
+                <Image src={'/macbook.png'} alt='' priority={true} width={500} height={500} />
+              </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <div className='content z-10'>
+                <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+              </div>
+              <div className='stick'>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+
+          </div>
+
+          <div className='detail contentMaxWidth'>
+            <div className='mainContent'>
+              <div className='left'>
+                <div className="content">
+                  <div>
+                    <h3 className='title'>Streaming application</h3>
+                    <ul className='ctnText'>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div>
+                    <h3 className='title'>Streaming protocol</h3>
+                    <ul className='ctnText'>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div>
+                    <h3 className='title'>Virtualization infrastructure </h3>
+                    <ul className='ctnText'>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                      <li className='text'>NextJS and ReactJS expert</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className='right'>
+                <div className='z-10 content'>
+                  <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+                </div>
+                <div className="content">
+
+                </div>
+                <div className='z-10 content'>
+                  <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+                </div>
+
+                <div className="stick">
+
+                </div>
+              </div>
+            </div>
+
+            {/* Our Client */}
+            <div className='subContent'>
+              <h2 className='title'>Our Client</h2>
+
+              <div className='w-full grid grid-cols-3 gap-16'>
+                <div className='client'>
+                  <div>
+                    <Image priority={true} width={150} height={100} src={'/brightcloud.png'} alt='' />
+                  </div>
+                  <p>Check out how to we power browser cloud gaming for BrightCloud</p>
+                </div>
+                <div className='client'>
+                  <div>
+                    <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
+                  </div>
+                  <p>CCheckout how we use
+                    our WebRTC, D3D11 and NvEnc expertise
+                    to power our cloud gaming service</p>
+                </div>
+                <div className='client'>
+                  <div>
+                    <Image priority={true} width={150} height={100} src={'/truecloud.png'} alt='' />
+                  </div>
+                  <p>Checkout how we
+                    power our partner’s
+                    cloud gaming service with KVM and
+                    thinkmay
+                    remote desktop</p>
+                </div>
+              </div>
+            </div>
+            {/* contact */}
+
+            <div>
+              <p className='text-center'>
+                Want to build a real time media streaming application?
+                <br />
+                Consultant on your virtualization infrastructure?
+                <br />
+                Need our help?
+              </p>
+
+                <a href="">Get In Touch</a>
+            </div>
+          </div>
+
+
+        </section>
       </div>
     </main>
   )
