@@ -43,7 +43,7 @@ export default function Home() {
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
                   <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
                 </div>
-                <ul  className='ctnText'>
+                <ul className='ctnText'>
                   <li>Consultant CloudPc/gaming service</li>
                   <li>Browser application</li>
                   <li>Streaming protocol</li>
@@ -54,44 +54,46 @@ export default function Home() {
           </section>
 
           <section className='enterprise'>
-            <div id='services' className='introduce contentMaxWidth '>
-              <div className="left">
-                <div className='content section'>
-                  <div className='mb-[80px]'>
-                    <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
-                    <p className='mt-[40px] leading-none text-white text-[30px]'>
-                      Are you building application which have
+            <div id='services' className='  '>
+              <div className='introduce contentMaxWidth'>
+                <div className="left">
+                  <div className='content section'>
+                    <div className='mb-[80px]'>
+                      <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
+                      <p className='mt-[40px] leading-none text-white text-[30px]'>
+                        Are you building application which have
 
-                      <br />
-                      <span className='specialText'>ultra low latency?</span>
-                    </p>
+                        <br />
+                        <span className='specialText'>ultra low latency?</span>
+                      </p>
 
-                    <a className='mt-[16px] btn-help' href="mailto:huyhoangdo@contact.thinkmay.net">Let us help you</a>
+                      <a className='mt-[16px] btn-help' href="mailto:huyhoangdo@contact.thinkmay.net">Let us help you</a>
+                    </div>
+                  </div>
+                  <div className='content section'>
+                    <div className='mb-[80px]'>
+                      <h3 className='font-bold text-[5rem] text-white'>Streaming
+                        <br />infrastructure</h3>
+                      <ul className='ctnText mt-[40px] pl-[5rem]'>
+                        <li className='text'>Virtual machine?</li>
+                        <li className='text'>Hypervisor?</li>
+                        <li className='text'>Data center? </li>
+                        <li className='text'>KVM or Hyper-V?</li>
+                        <li className='text'>Big word, let us handle that.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div className='content section'>
-                  <div className='mb-[80px]'>
-                    <h3 className='font-bold text-[5rem] text-white'>Streaming
-                      <br />infrastructure</h3>
-                    <ul className='ctnText mt-[40px] pl-[5rem]'>
-                      <li className='text'>Virtual machine?</li>
-                      <li className='text'>Hypervisor?</li>
-                      <li className='text'>Data center? </li>
-                      <li className='text'>KVM or Hyper-V?</li>
-                      <li className='text'>Big word, let us handle that.</li>
-                    </ul>
+                <div className="right">
+                  <div className='content section z-10'>
+                    <Image src={'/macbook.png'} alt='' priority={true} width={600} height={500} />
                   </div>
-                </div>
-              </div>
-              <div className="right">
-                <div className='content section z-10'>
-                  <Image src={'/macbook.png'} alt='' priority={true} width={600} height={500} />
-                </div>
 
-                <div className='content section z-10'>
-                  <Image alt='logo' priority={true} width={600} height={120} src={'/server1.png'} />
-                </div>
-                <div className='stick'>
+                  <div className='content section z-10'>
+                    <Image alt='logo' priority={true} width={600} height={120} src={'/server1.png'} />
+                  </div>
+                  <div className='stick'>
+                  </div>
                 </div>
               </div>
 
@@ -167,8 +169,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className='bg'>
-                </div>
+                {/*<div className='bg'>
+                </div>*/}
 
                 {/*<div className="bg2">
 
@@ -214,35 +216,38 @@ export default function Home() {
 
           </section>
 
-          <div className='section contact contentMaxWidth'>
-            <div className='info flex flex-col items-center'>
-              <p className='text-center text '>
-                Want to build a real time media streaming application?
-                <br />
-                Consultant on your virtualization infrastructure?
-                <br />
-                Need our help?
-              </p>
+          <div className='section contact '>
+            <div className='info'>
+              <div className=' contentMaxWidth flex flex-col items-center'>
+                <p className='text-center text '>
+                  Want to build a real time media streaming application?
+                  <br />
+                  Consultant on your virtualization infrastructure?
+                  <br />
+                  Need our help?
+                </p>
 
-              <a className='btn-help mt-[1.6rem]' href="mailto:huyhoangdo@contact.thinkmay.net">Get In Touch</a>
+                <a className='btn-help mt-[1.6rem]' href="mailto:huyhoangdo@contact.thinkmay.net">Get In Touch</a>
+              </div>
+              
             </div>
-            <div className='bottom'>
-              <div>
+            <div className='bottom contentMaxWidth'>
                 <div>
-                  <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
+                  <div>
+                    <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
+                  </div>
+                  <span>© 2021-2023 thinkmay - All rights reserved.</span>
                 </div>
-                <span>© 2021-2023 thinkmay - All rights reserved.</span>
-              </div>
 
-              <div>
-                <h3 className='text-[2.2rem]'>Contact Info</h3>
-                <ul>
-                  <li className='text-[2rem]'>+84 347961231</li>
-                  <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
-                  <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
-                </ul>
+                <div>
+                  <h3 className='text-[2.2rem]'>Contact Info</h3>
+                  <ul>
+                    <li className='text-[2rem]'>+84 347961231</li>
+                    <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
+                    <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
+                  </ul>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
