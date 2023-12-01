@@ -16,7 +16,7 @@ export default function Home() {
               <li className='item'><a href="#technologies">Technologies</a></li>
               <li className='item'><a href="#casestudy">Case study</a></li>
               <li className='item'>
-                <a className='btn-gaming' href="">Gaming</a>
+                <a className='btn-gaming' href="https://app.thinkmay.net/">Gaming</a>
               </li>
             </ul>
           </div>
@@ -31,20 +31,24 @@ export default function Home() {
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
                   <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>Cloud gaming</p>
                 </div>
-                <li>Play game on any devices</li>
-                <li>From 10$ per month</li>
-                <li>Play game instantly</li>
-                <li>Available in Vietnam</li>
+                <ul className='ctnText'>
+                  <li>Play game on any devices</li>
+                  <li>From 10$ per month</li>
+                  <li>Play game instantly</li>
+                  <li>Available in Vietnam</li>
+                </ul>
               </ul>
               <ul className='selection right'>
                 <div className='relative mb-[40px]'>
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
                   <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
                 </div>
-                <li>Consultant CloudPc/gaming service</li>
-                <li>Browser application</li>
-                <li>Streaming protocol</li>
-                <li>Virtualization technology</li>
+                <ul  className='ctnText'>
+                  <li>Consultant CloudPc/gaming service</li>
+                  <li>Browser application</li>
+                  <li>Streaming protocol</li>
+                  <li>Virtualization technology</li>
+                </ul>
               </ul>
             </div>
           </section>
@@ -61,7 +65,8 @@ export default function Home() {
                       <br />
                       <span className='specialText'>ultra low latency?</span>
                     </p>
-                    <a className='mt-[16px] btn-help' href="">Let us help you</a>
+
+                    <a className='mt-[16px] btn-help' href="mailto:huyhoangdo@contact.thinkmay.net">Let us help you</a>
                   </div>
                 </div>
                 <div className='content section'>
@@ -219,24 +224,24 @@ export default function Home() {
                 Need our help?
               </p>
 
-              <a className='btn-help mt-[1.6rem]' href="">Get In Touch</a>
+              <a className='btn-help mt-[1.6rem]' href="mailto:huyhoangdo@contact.thinkmay.net">Get In Touch</a>
             </div>
             <div className='bottom'>
+              <div>
                 <div>
-                  <div>
-                    <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
-                  </div>
-                  <span>© 2021-2023 thinkmay - All rights reserved.</span>
+                  <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
                 </div>
+                <span>© 2021-2023 thinkmay - All rights reserved.</span>
+              </div>
 
-                <div>
-                  <h3 className='text-[2.2rem]'>Contact Info</h3>
-                  <ul>
-                    <li className='text-[2rem]'>+84 347961231</li>
-                    <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
-                    <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
-                  </ul>
-                </div>
+              <div>
+                <h3 className='text-[2.2rem]'>Contact Info</h3>
+                <ul>
+                  <li className='text-[2rem]'>+84 347961231</li>
+                  <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
+                  <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
