@@ -6,8 +6,39 @@
 
 		
 	}
-}
+	.ctnHeader{
+		position: fixed;
+		width: 100%;
+		height: 120px;
+		top: 0;
+		z-index: 999;
+	}
 
+	
+	.header{
+		padding: 15px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.right{
+			display: flex;
+			gap: 8px;
+		}
+	}
+}
+html{
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+.information{
+	scroll-snap-type: y mandatory;
+	
+}
+.section{
+	height: 100vh;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
 
 .contentMaxWidth{
 	max-width: 1200px;
@@ -17,7 +48,11 @@
 }
 
 .lookingFor{
-	min-height: calc(100vh - 75px);
+	//min-height: calc(100vh - 75px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 	.options{
 		width: 100%;
 		display: flex;
@@ -158,22 +193,24 @@
 	.detail{
 		//display: flex;
 		//justify-content: space-between;
-		height: 400vh;
+		height: 420vh;
 		background: radial-gradient(24% 91.44% at 81.27% 66.94%, #002177 5.06%, #000 100%, #000 100%);
 
 		.mainContent{
 			display: flex;
 			justify-content: space-between;
 			height: 300vh;
+			position: relative;
 			.left{
-	
+				z-index: 2;
 			}
 			.right{
 				position: relative;
 				display: flex;
 				flex-direction: column;
 				//justify-content: space-between;
-	
+				background: radial-gradient(24% 91.44% at 81.27% 66.94%, #002177 5.06%, #000 100%, #000 100%);
+
 				.stick{
 					position: absolute;
 					z-index: 1;
@@ -183,6 +220,8 @@
 					background: linear-gradient(#0057FF, #FF9900, #0057FF);
 					height: calc(100% - 88vh);
 					width: 8px;
+					box-shadow: rgb(76 88 134 / 50%) 4px 8px 25px 32px;
+					}
 				}
 			}
 			.content{
@@ -206,6 +245,23 @@
 				
 				
 			}
+
+			.bg{
+				position: absolute;
+				z-index: 0;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				background: radial-gradient(6.73% 2.34% at 52.54% 71.12%, rgba(0, 71, 255, 0.2) 73.73%, rgba(0, 0, 0, 0.2) 100%), radial-gradient(99.66% 11.31% at 75.66% 17.9%, #AD00FF 26.04%, #001DB4 55.73%, #000 100%);
+			}
+			.bg2{
+				position: absolute;
+				z-index: 0;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				background: radial-gradient(24% 91.44% at 81.27% 66.94%, #002177 5.06%, #000 100%, #000 100%);
+			}
 		}
 		
 		.subContent{
@@ -214,10 +270,12 @@
 			height: 100vh;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 
 			.title{
 				font-size: 4rem;
 				font-weight: 700;
+				margin-bottom: 56px;
 			}
 
 			.client{
@@ -253,6 +311,5 @@
 			}
 		}
 		
-	}
-	
 }
+	
