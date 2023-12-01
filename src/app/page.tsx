@@ -26,7 +26,7 @@ export default function Home() {
           <section className=' section lookingFor contentMaxWidth'>
             <h3 className='title'>Are you looking for</h3>
             <div className='options flex ' >
-              <ul className='selection left'>
+              <a href='https://app.thinkmay.net/' target='_blank' className='selection left'>
                 <div className='relative mb-[40px]'>
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
                   <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>Cloud gaming</p>
@@ -37,8 +37,8 @@ export default function Home() {
                   <li>Play game instantly</li>
                   <li>Available in Vietnam</li>
                 </ul>
-              </ul>
-              <ul className='selection right'>
+              </a>
+              <a href='#services' className='selection right'>
                 <div className='relative mb-[40px]'>
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
                   <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
@@ -49,7 +49,7 @@ export default function Home() {
                   <li>Streaming protocol</li>
                   <li>Virtualization technology</li>
                 </ul>
-              </ul>
+              </a>
             </div>
           </section>
 
