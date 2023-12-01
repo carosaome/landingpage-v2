@@ -12,9 +12,9 @@ export default function Home() {
 
 
             <ul className="right">
-              <li className='item'>Services</li>
-              <li className='item'>Technologies</li>
-              <li className='item'>Case study</li>
+              <li className='item'><a href="#services">Services</a></li>
+              <li className='item'><a href="#technologies">Technologies</a></li>
+              <li className='item'><a href="#casestudy">Case study</a></li>
               <li className='item'>
                 <a className='btn-gaming' href="">Gaming</a>
               </li>
@@ -50,14 +50,14 @@ export default function Home() {
           </section>
 
           <section className='enterprise'>
-            <div className='introduce contentMaxWidth '>
+            <div id='services' className='introduce contentMaxWidth '>
               <div className="left">
                 <div className='content section'>
                   <div className='mb-[80px]'>
                     <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
                     <p className='mt-[40px] leading-none text-white text-[30px]'>
                       Are you building application which have
-                      
+
                       <br />
                       <span className='specialText'>ultra low latency?</span>
                     </p>
@@ -65,7 +65,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='content section'>
-                  <div  className='mb-[80px]'>
+                  <div className='mb-[80px]'>
                     <h3 className='font-bold text-[5rem] text-white'>Streaming
                       <br />infrastructure</h3>
                     <ul className='ctnText mt-[40px] pl-[5rem]'>
@@ -95,7 +95,7 @@ export default function Home() {
             </div>
 
             <div className='detail contentMaxWidth'>
-              <div className='mainContent'>
+              <div id='technologies' className='mainContent'>
                 <div className='left'>
                   <div className="content section">
                     <div>
@@ -124,9 +124,9 @@ export default function Home() {
 
                         <li className='text'>Media codec expert</li>
                         <ul className='list-disc pl-4'><li className="text">H264</li>
-                        <li className="text">H265</li>
-                        <li className="text">AV1</li>
-                        <li className="text">OPUS</li></ul>
+                          <li className="text">H265</li>
+                          <li className="text">AV1</li>
+                          <li className="text">OPUS</li></ul>
                       </ul>
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function Home() {
               </div>
 
               {/* Our Client */}
-              <div className='subContent section'>
+              <div id='casestudy' className='subContent section'>
                 <h2 className='title'>Our Client</h2>
 
                 <div className='w-full grid grid-cols-3 gap-16'>
@@ -203,21 +203,42 @@ export default function Home() {
               </div>
               {/* contact */}
 
-              <div className='section'>
-                <p className='text-center'>
-                  Want to build a real time media streaming application?
-                  <br />
-                  Consultant on your virtualization infrastructure?
-                  <br />
-                  Need our help?
-                </p>
 
-                <a href="">Get In Touch</a>
-              </div>
             </div>
 
 
           </section>
+
+          <div className='section contact contentMaxWidth'>
+            <div className='info flex flex-col items-center'>
+              <p className='text-center text '>
+                Want to build a real time media streaming application?
+                <br />
+                Consultant on your virtualization infrastructure?
+                <br />
+                Need our help?
+              </p>
+
+              <a className='btn-help mt-[1.6rem]' href="">Get In Touch</a>
+            </div>
+            <div className='bottom'>
+                <div>
+                  <div>
+                    <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
+                  </div>
+                  <span>© 2021-2023 thinkmay - All rights reserved.</span>
+                </div>
+
+                <div>
+                  <h3>Contact Info</h3>
+                  <ul>
+                    <li className='text-[2rem]'>+84 347961231</li>
+                    <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
+                    <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -12,6 +12,7 @@
 		height: 120px;
 		top: 0;
 		z-index: 999;
+		background: #000;
 	}
 
 	
@@ -25,12 +26,13 @@
 			align-items: center;
 			gap: 24px;
 			.item{
-				font-size: 2rem;
 				cursor: pointer;
 				&:hover{
 					opacity: 0.5;
 				}
-				
+				a{
+					font-size: 2rem;
+				}
 
 				.btn-gaming{
 					display: flex;
@@ -163,6 +165,7 @@ html{
     background: #BF7F1D;
     border-radius: 99px;
     font-size: 1.8rem;
+	font-weight: 700;
 }
 .enterprise{
 	.introduce{
@@ -365,6 +368,34 @@ html{
 				  }
 			}
 		}
-		
+	
+	
 }
 	
+.contact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.info{
+		background: linear-gradient(180deg, #000 4.79%, #0026AC 100.7%, #000 72.71%);		height: 70vh;
+		width: 100%;
+		height: 70vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.text{
+		font-size: 2.8rem;
+		font-weight: 700;
+	}
+
+	.bottom{
+		display: flex;
+		gap: 16%;
+		height: 30vh;
+		width: 100%;
+		align-items: center;
+	}
+
+}
