@@ -12,10 +12,12 @@ export default function Home() {
 
 
             <ul className="right">
-              <li>Case study</li>
-              <li>Case study</li>
-              <li>Case study</li>
-              <li>Case study</li>
+              <li className='item'>Services</li>
+              <li className='item'>Technologies</li>
+              <li className='item'>Case study</li>
+              <li className='item'>
+                <a className='btn-gaming' href="">Gaming</a>
+              </li>
             </ul>
           </div>
         </header>
@@ -51,33 +53,38 @@ export default function Home() {
             <div className='introduce contentMaxWidth '>
               <div className="left">
                 <div className='content section'>
-                  <div>
+                  <div className='mb-[80px]'>
                     <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
-                    <p className='text-white text-[30px]'>
+                    <p className='mt-[40px] leading-none text-white text-[30px]'>
                       Are you building application which have
-                      ultra low latency?
+                      
+                      <br />
+                      <span className='specialText'>ultra low latency?</span>
                     </p>
-                    <a href="">Let us help you</a>
+                    <a className='mt-[16px] btn-help' href="">Let us help you</a>
                   </div>
                 </div>
                 <div className='content section'>
-                  <div>
-                    <h3 className='font-bold text-[5rem] text-white'>Cloud gaming <br />  4k120fps 60ms?</h3>
-                    <ul className='flex items-start gap-[8px] mt-[80px]'>
-                      <li>Virtual machine?</li>
-                      <li>Virtual machine?</li>
-                      <li>Virtual machine?</li>
+                  <div  className='mb-[80px]'>
+                    <h3 className='font-bold text-[5rem] text-white'>Streaming
+                      <br />infrastructure</h3>
+                    <ul className='ctnText mt-[40px] pl-[5rem]'>
+                      <li className='text'>Virtual machine?</li>
+                      <li className='text'>Hypervisor?</li>
+                      <li className='text'>Data center? </li>
+                      <li className='text'>KVM or Hyper-V?</li>
+                      <li className='text'>Big word, let us handle that.</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="right">
                 <div className='content section z-10'>
-                  <Image src={'/macbook.png'} alt='' priority={true} width={500} height={500} />
+                  <Image src={'/macbook.png'} alt='' priority={true} width={600} height={500} />
                 </div>
 
                 <div className='content section z-10'>
-                  <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+                  <Image alt='logo' priority={true} width={600} height={120} src={'/server1.png'} />
                 </div>
                 <div className='stick'>
                 </div>
@@ -93,9 +100,10 @@ export default function Home() {
                   <div className="content section">
                     <div>
                       <h3 className='title'>Streaming application</h3>
-                      <ul className='ctnText'>
-                        <li className='text'>NextJS and ReactJS expert</li>
-                        <li className='text'>NextJS and ReactJS expert</li>
+                      <ul className='ctnText list-decimal pl-[5rem]'>
+                        <li className='text'>Web-based remote desktop.</li>
+                        <li className='text'>WebRTC on browser.</li>
+                        <li className='text'>Gamepad, keyboard and mouse passthrough</li>
                         <li className='text'>NextJS and ReactJS expert</li>
                       </ul>
                     </div>
@@ -104,10 +112,21 @@ export default function Home() {
                   <div className="content section">
                     <div>
                       <h3 className='title'>Streaming protocol</h3>
-                      <ul className='ctnText'>
-                        <li className='text'>NextJS and ReactJS expert</li>
-                        <li className='text'>NextJS and ReactJS expert</li>
-                        <li className='text'>NextJS and ReactJS expert</li>
+                      <ul className='ctnText list-decimal pl-[5rem]'>
+                        <li className='text'>WebRTC protocol</li>
+                        <li className='text'>Encode library expert</li>
+                        <ul className='list-disc pl-4'>
+                          <li className="text">Nvenc</li>
+                          <li className="text">AMF</li>
+                          <li className="text">FFmpeg</li>
+                          <li className="text">Gstreamer</li>
+                        </ul>
+
+                        <li className='text'>Media codec expert</li>
+                        <ul className='list-disc pl-4'><li className="text">H264</li>
+                        <li className="text">H265</li>
+                        <li className="text">AV1</li>
+                        <li className="text">OPUS</li></ul>
                       </ul>
                     </div>
                   </div>
@@ -116,9 +135,11 @@ export default function Home() {
                     <div>
                       <h3 className='title'>Virtualization infrastructure </h3>
                       <ul className='ctnText'>
-                        <li className='text'>NextJS and ReactJS expert</li>
-                        <li className='text'>NextJS and ReactJS expert</li>
-                        <li className='text'>NextJS and ReactJS expert</li>
+                        <li className='text'>KVM and Hyper-V</li>
+                        <li className='text'>GPU virtualization</li>
+                        <li className='text'>Virtualization performance optimization</li>
+                        <li className='text'>Gaming on virtual machine</li>
+                        <li className='text'>Virtual display, virtual soundcard</li>
                       </ul>
                     </div>
                   </div>
@@ -127,17 +148,17 @@ export default function Home() {
 
                 <div className='right'>
                   <div className='z-10 content'>
-                    <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+                    <Image alt='logo' priority={true} width={600} height={120} src={'/macbook.png'} />
                   </div>
                   <div className="content">
 
                   </div>
                   <div className='z-10 content'>
-                    <Image alt='logo' priority={true} width={500} height={120} src={'/server1.png'} />
+                    <Image alt='logo' priority={true} width={600} height={120} src={'/server2.png'} />
                   </div>
 
                   <div className="stick">
-                    
+
                   </div>
                 </div>
 
@@ -164,7 +185,7 @@ export default function Home() {
                     <div>
                       <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
                     </div>
-                    <p>CCheckout how we use
+                    <p>Checkout how we use
                       our WebRTC, D3D11 and NvEnc expertise
                       to power our cloud gaming service</p>
                   </div>
@@ -182,7 +203,7 @@ export default function Home() {
               </div>
               {/* contact */}
 
-              <div>
+              <div className='section'>
                 <p className='text-center'>
                   Want to build a real time media streaming application?
                   <br />

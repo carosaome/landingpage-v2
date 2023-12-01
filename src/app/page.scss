@@ -22,7 +22,28 @@
 		align-items: center;
 		.right{
 			display: flex;
-			gap: 8px;
+			align-items: center;
+			gap: 24px;
+			.item{
+				font-size: 2rem;
+				cursor: pointer;
+				&:hover{
+					opacity: 0.5;
+				}
+				
+
+				.btn-gaming{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 2rem;
+					width: 120px;
+					height: 48px;
+					border-radius: 100px;
+					background: linear-gradient(270deg, #030DFF 0%, #BF1DAF 100%);
+				}
+				
+			}
 		}
 	}
 }
@@ -58,7 +79,7 @@ html{
 		display: flex;
 		justify-content: space-between;
 		gap: 256px;
-		margin-top: 80px;
+		margin-top: 56px;
 	
 		.selection{
 			flex: 1;
@@ -117,12 +138,32 @@ html{
 		color: #FFF;
 		text-align: center;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		font-size: 64px;
+		font-size: 5.6rem;
 		font-weight: 500;
 	}
 }
 
+.specialText{
+	display: inline-block;
+	width: 100%;
+	background: linear-gradient(270deg, #AC07C7 28.24%, rgba(186, 178, 0, 0.56) 107.02%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 5.2rem;
+	font-style: italic;
+}
 
+.btn-help{
+	width: 200px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #BF7F1D;
+    border-radius: 99px;
+    font-size: 1.8rem;
+}
 .enterprise{
 	.introduce{
 		position: relative;
@@ -130,11 +171,21 @@ html{
 		display: flex;
 		justify-content: space-between;
 		color: #ffffff;
-
-		.content{
+		background: radial-gradient(5.73% 3.34% at 52.54% -2.88%, rgba(0, 71, 255, 0.2) 73.73%, rgba(0, 0, 0, 0.2) 100%), radial-gradient(99.66% 11.31% at 75.66% 24.9%, #AD00FF 26.04%, #001DB4 55.73%, #000 100%);		.content{
 			height: 100vh;
 			display: flex;
 			align-items: center;
+
+			.ctnText{
+				display: flex;
+				flex-direction: column;
+				//gap: 4px;
+
+				.text{
+					font-size: 2.4rem;
+
+				}
+			}
 		}
 		.left{
 
@@ -228,6 +279,9 @@ html{
 				height: 100vh;
 				display: flex;
 				align-items: center;
+				//justify-content: center;
+				//scroll-snap-align: start;
+				//scroll-snap-stop: normal;
 				.title{
 					font-size: 4.5rem;
 					font-weight: 700;
@@ -242,6 +296,7 @@ html{
 						font-size: 2.4rem;
 					}
 				}
+				
 				
 				
 			}
