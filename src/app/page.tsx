@@ -4,52 +4,55 @@ export default function Home() {
   return (
     <main className="main">
       <div className='content'>
-        <header className='ctnHeader '>
-          <div className='header contentMaxWidth'>
-            <div>
-              <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
-            </div>
 
-
-            <ul className="right">
-              <li className='item'><a href="#services">Services</a></li>
-              <li className='item'><a href="#technologies">Technologies</a></li>
-              <li className='item'><a href="#casestudy">Case study</a></li>
-              <li className='item'>
-                <a className='btn-gaming' href="https://app.thinkmay.net/">Gaming</a>
-              </li>
-            </ul>
-          </div>
-        </header>
 
         <div className='information'>
-          <section className=' section lookingFor contentMaxWidth'>
-            <h3 className='title'>Are you looking for</h3>
-            <div className='options flex ' >
-              <a href='https://app.thinkmay.net/' target='_blank' className='selection left'>
-                <div className='relative mb-[40px]'>
+          <section className=' section '>
+            <header className='ctnHeader '>
+              <div className='header contentMaxWidth'>
+                <div>
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
-                  <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>Cloud gaming</p>
                 </div>
-                <ul className='ctnText'>
-                  <li>Play game on any devices</li>
-                  <li>From 10$ per month</li>
-                  <li>Play game instantly</li>
-                  <li>Available in Vietnam</li>
+
+
+                <ul className="right">
+                  <li className='item'><a href="#services">Services</a></li>
+                  <li className='item'><a href="#technologies">Technologies</a></li>
+                  <li className='item'><a href="#casestudy">Case study</a></li>
+                  <li className='item'>
+                    <a className='btn-gaming' href="https://app.thinkmay.net/">Gaming</a>
+                  </li>
                 </ul>
-              </a>
-              <a href='#services' className='selection right'>
-                <div className='relative mb-[40px]'>
-                  <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
-                  <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
-                </div>
-                <ul className='ctnText'>
-                  <li>Consultant CloudPc/gaming service</li>
-                  <li>Browser application</li>
-                  <li>Streaming protocol</li>
-                  <li>Virtualization technology</li>
-                </ul>
-              </a>
+              </div>
+            </header>
+            <div className='lookingFor contentMaxWidth'>
+              <h3 className='title'>Are you looking for</h3>
+              <div className='options flex ' >
+                <a href='https://app.thinkmay.net/' target='_blank' className='selection left'>
+                  <div className='relative mb-[40px]'>
+                    <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
+                    <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>Cloud gaming</p>
+                  </div>
+                  <ul className='ctnText'>
+                    <li>Play game on any devices</li>
+                    <li>From 10$ per month</li>
+                    <li>Play game instantly</li>
+                    <li>Available in Vietnam</li>
+                  </ul>
+                </a>
+                <a href='#services' className='selection right'>
+                  <div className='relative mb-[40px]'>
+                    <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
+                    <p className='w-[120px] absolute bottom-[-11%] left-[53%] italic'>enterprise</p>
+                  </div>
+                  <ul className='ctnText'>
+                    <li>Consultant CloudPc/gaming service</li>
+                    <li>Browser application</li>
+                    <li>Streaming protocol</li>
+                    <li>Virtualization technology</li>
+                  </ul>
+                </a>
+              </div>
             </div>
           </section>
 
@@ -229,25 +232,25 @@ export default function Home() {
 
                 <a className='btn-help mt-[1.6rem]' href="mailto:huyhoangdo@contact.thinkmay.net">Get In Touch</a>
               </div>
-              
+
             </div>
             <div className='bottom contentMaxWidth'>
+              <div>
                 <div>
-                  <div>
-                    <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
-                  </div>
-                  <span>© 2021-2023 thinkmay - All rights reserved.</span>
+                  <Image priority={true} width={150} height={100} src={'/logo.png'} alt='' />
                 </div>
-
-                <div>
-                  <h3 className='text-[2.2rem]'>Contact Info</h3>
-                  <ul>
-                    <li className='text-[2rem]'>+84 347961231</li>
-                    <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
-                    <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
-                  </ul>
-                </div>
+                <span>© 2021-2023 thinkmay - All rights reserved.</span>
               </div>
+
+              <div>
+                <h3 className='text-[2.2rem]'>Contact Info</h3>
+                <ul>
+                  <li className='text-[2rem]'>+84 347961231</li>
+                  <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
+                  <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
