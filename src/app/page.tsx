@@ -230,7 +230,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3>Contact Info</h3>
+                  <h3 className='text-[2.2rem]'>Contact Info</h3>
                   <ul>
                     <li className='text-[2rem]'>+84 347961231</li>
                     <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
