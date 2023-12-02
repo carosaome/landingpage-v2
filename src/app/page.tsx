@@ -1,5 +1,9 @@
 import Image from 'next/image'
 import './page.scss'
+import Script from 'next/script'
+
+
+
 export default function Home() {
   return (
     <main className="main">
@@ -253,6 +257,16 @@ export default function Home() {
             </div>
           </div>
         </div>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-37TE72KVQ1" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-37TE72KVQ1');
+        `}
+      </Script>
       </div>
     </main>
   )
