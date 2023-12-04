@@ -96,6 +96,8 @@ html{
 }
 
 .lookingFor{
+	padding-left: 50px;
+	padding-right: 50px;
 	min-height: calc(100vh - 120px);
 	display: flex;
 	flex-direction: column;
@@ -105,7 +107,7 @@ html{
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		gap: 256px;
+		gap: 100px;
 		margin-top: 56px;
 	
 		.selection{

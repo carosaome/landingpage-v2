@@ -14,18 +14,19 @@ export default function Home() {
 
   useEffect(() => {
     const result = localStorage.getItem('SELECTION')
+    console.log(result)
     switch (result) {
       case 'ENTERPRISE':
         setSelection('ENTERPRISE')
         break;
       case 'GAMING':
         setSelection('UNKOWN')
-        // router.push(`${REDIRECT_PAGE}`)
         break;
       default:
+        setSelection('UNKOWN')
         break;
     }
-  })
+  },[])
 
   const gamingSelect = async () => {
     localStorage.setItem('SELECTION','GAMING')
