@@ -4,6 +4,7 @@ import Image from 'next/image'
 import './page.scss'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { UserEvents, UserSession } from '@/utils/analytics'
 
 type Selection = 'GAMING' | 'ENTERPRISE' | 'UNKOWN'
 const REDIRECT_PAGE = "https://app.thinkmay.net/"
@@ -13,6 +14,9 @@ export default function Home() {
   const [selection,setSelection] = useState<Selection>('ENTERPRISE')
 
   useEffect(() => {
+    localStorage.setItem('SESSION_ID',crypto.randomUUID())
+    UserSession()
+
     const result = localStorage.getItem('SELECTION')
     console.log(result)
     switch (result) {
@@ -30,11 +34,13 @@ export default function Home() {
 
   const gamingSelect = async () => {
     localStorage.setItem('SELECTION','GAMING')
+    UserEvents({content: 'select gaming'})
     router.push(`${REDIRECT_PAGE}`)
   }
 
   const enterpriseSelect = async () => {
     localStorage.setItem('SELECTION','ENTERPRISE')
+    UserEvents({content: 'select enterprise'})
     setSelection('ENTERPRISE')
   }
 

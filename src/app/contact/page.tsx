@@ -1,32 +1,23 @@
 'use client'
 import Image from 'next/image'
 import './contact.scss'
-import { useRef } from 'react'
-import { createClient } from '@supabase/supabase-js'
+import { useEffect, useRef } from 'react'
 import sweetalert from 'sweetalert2'
+import { ContactUS, UserEvents } from '@/utils/analytics'
 
-const sb = {
-	url: "https://supabase.thinkmay.net",
-	key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNjk0MDE5NjAwLAogICJleHAiOiAxODUxODcyNDAwCn0.EpUhNso-BMFvAJLjYbomIddyFfN--u-zCf0Swj9Ac6E"
-}
 
 export default function Contact() {
 	const content = useRef<HTMLTextAreaElement>(null)
 	const email = useRef<HTMLInputElement>(null)
 
+	useEffect(() => { UserEvents({content: 'go to contact page'}) })
 	const Send = async () => {
 		const data = {
-			content: content.current?.value,
-			email: email.current?.value
+			content: content.current?.value ?? 'unknown',
+			email: email.current?.value ?? 'unknown'
 		}
 
-		await createClient(sb.url,sb.key)
-			.from('generic_events')
-			.insert({
-				value: data.content,
-				name: `message from ${data.email}`,
-				type: 'MESSAGE',
-			})
+		await ContactUS(data)
 		
 		sweetalert.fire({
 			title: "Thank you",
@@ -64,11 +55,11 @@ export default function Contact() {
 				<div className=' contentMaxWidth pb-[40px]  w-full h-full flex flex-col items-center'>
 					<div className='overflow-hidden flex gap-[32px] p-[32px] flex-1 max-w-[900px]  max-h-[540px] w-full rounded-xl bg-[#efe3d2]'>
 						<div className='left'>
-							<h3 className="title">Let’s talk</h3>
-							<p className='text-[#232323] text-[1.6rem]'>Tell us your problem:</p>
+							<h3 className="title">Let’s discuss further</h3>
+							<p className='text-[#232323] text-[1.6rem]'>How can we help you?</p>
 							<div className=''>
-								<textarea name="" id="" ref={content} ></textarea>
-								<input ref={email} className='mt-[8px]' type="text" placeholder='Your email' />
+								<input ref={email} className='mb-[8px]' type="text" placeholder='Your email' />
+								<textarea name="" id="" placeholder='Your description about the problem ' ref={content} ></textarea>
 							</div>
 							<button 
 								onClick={Send}
