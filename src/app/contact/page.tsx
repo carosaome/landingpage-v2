@@ -34,7 +34,7 @@ export default function Contact() {
 			<div className='info'>
 
 				<div className=' contentMaxWidth pb-[40px]  w-full h-full flex flex-col items-center'>
-					<div className='overflow-hidden flex gap-[32px] p-[32px] flex-1 max-w-[900px]  max-h-[540px] w-full max-h-[700px] rounded-xl bg-[#efe3d2]'>
+					<div className='overflow-hidden flex gap-[32px] p-[32px] flex-1 max-w-[900px]  max-h-[540px] w-full rounded-xl bg-[#efe3d2]'>
 						<div className='left'>
 							<h3 className="title">Let’s talk</h3>
 							<p className='text-[#232323] text-[1.6rem]'>Tell us your problem:</p>
