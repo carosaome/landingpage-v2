@@ -138,12 +138,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="right">
-                  <div className='content section z-10'>
-                    <Image src={'/macbook.png'} alt='' priority={true} width={900} height={500} />
+                  <div className='content section'>
+                    <Image className="z-10" src={'/macbook.png'} alt='' priority={true} width={900} height={500} />
                   </div>
 
-                  <div className='content section z-10'>
-                    <Image alt='logo' priority={true} width={900} height={500} src={'/server1.png'} />
+                  <div className='content section virtualization'>
+                    <Image className="z-10" alt='logo' priority={true} width={900} height={500} src={'/server1.png'} />
                   </div>
                   <div 
                     className='stick'
@@ -264,17 +264,13 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              {/* contact */}
-
-
             </div>
-
 
           </section>
 
           <div className='section contact '>
             <div className='info'>
-              <div className=' contentMaxWidth flex flex-col items-center'>
+              <div className='contentMaxWidth flex flex-col items-center'>
                 <p className='text-center text '>
                   Want to build a real time media streaming application?
                   <br />
@@ -295,12 +291,19 @@ export default function Home() {
                 <span>© 2021-2023 thinkmay - All rights reserved.</span>
               </div>
 
+
               <div>
-                <h3 className='text-[2.2rem]'>Contact Info</h3>
                 <ul>
-                  <li className='text-[2rem]'>+84 347961231</li>
+                  <li className='text-[2rem]'>Services</li>
+                  <li className='text-[2rem]'>Technologies</li>
+                  <li className='text-[2rem]'>Case study</li>
+                </ul>
+              </div>
+
+              <div>
+                <ul>
                   <li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
-                  <li className='text-[2rem]'>Hoa Lac, Hanoi, Vietnam</li>
+                  <li className='text-[2rem]'>Hoa Lac, Ha Noi, Viet Nam</li>
                 </ul>
               </div>
             </div>
