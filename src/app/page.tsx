@@ -275,12 +275,10 @@ export default function Home() {
                 <p className='text-center text '>
                   Want to build a real time media streaming application?
                   <br />
-                  Consultant on your virtualization infrastructure?
-                  <br />
-                  Need our help?
+                  Need consultant for your virtualization infrastructure?
                 </p>
 
-                <a className='btn-help mt-[1.6rem]' href="mailto:huyhoangdo@contact.thinkmay.net">Get In Touch</a>
+                <a className='btn-help mt-[1.6rem]' href="/contact">Get In Touch</a>
               </div>
 
             </div>
@@ -307,6 +305,7 @@ export default function Home() {
                   <li className='text-[2rem]'>Hoa Lac, Ha Noi, Viet Nam</li>
                 </ul>
               </div>
+
             </div>
           </div>
         </div>

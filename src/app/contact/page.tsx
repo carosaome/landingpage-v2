@@ -1,11 +1,39 @@
-
+'use client'
 import Image from 'next/image'
 import './contact.scss'
+import { useRef } from 'react'
+import { createClient } from '@supabase/supabase-js'
+import sweetalert from 'sweetalert2'
 
+const sb = {
+	url: "https://supabase.thinkmay.net",
+	key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNjk0MDE5NjAwLAogICJleHAiOiAxODUxODcyNDAwCn0.EpUhNso-BMFvAJLjYbomIddyFfN--u-zCf0Swj9Ac6E"
+}
 
 export default function Contact() {
+	const content = useRef<HTMLTextAreaElement>(null)
+	const email = useRef<HTMLInputElement>(null)
 
+	const Send = async () => {
+		const data = {
+			content: content.current?.value,
+			email: email.current?.value
+		}
 
+		await createClient(sb.url,sb.key)
+			.from('generic_events')
+			.insert({
+				value: data.content,
+				name: `message from ${data.email}`,
+				type: 'MESSAGE',
+			})
+		
+		sweetalert.fire({
+			title: "Thank you",
+			text: "We received your message!",
+			icon: "success"
+		});
+	}
 
 	return (
 
@@ -39,10 +67,12 @@ export default function Contact() {
 							<h3 className="title">Let’s talk</h3>
 							<p className='text-[#232323] text-[1.6rem]'>Tell us your problem:</p>
 							<div className=''>
-								<textarea name="" id="" ></textarea>
-								<input className='mt-[8px]' type="text" placeholder='Your email' />
+								<textarea name="" id="" ref={content} ></textarea>
+								<input ref={email} className='mt-[8px]' type="text" placeholder='Your email' />
 							</div>
-							<button className='btn-send mt-[40px]'>Send</button>
+							<button 
+								onClick={Send}
+								className='btn-send mt-[40px]'>Send</button>
 						</div>
 
 						<div className='right'>
@@ -69,13 +99,20 @@ export default function Contact() {
 					</div>
 
 					<div>
-						<h3 className='text-[1.8rem]'>Contact Info</h3>
 						<ul>
-							<li className='text-[1.6rem]'>+84 347961231</li>
-							<li className='text-[1.6rem]'>huyhoangdo@contact.thinkmay.net</li>
-							<li className='text-[1.6rem]'>Hoa Lac, Hanoi, Vietnam</li>
+						<li className='text-[2rem]'>Services</li>
+						<li className='text-[2rem]'>Technologies</li>
+						<li className='text-[2rem]'>Case study</li>
 						</ul>
 					</div>
+
+					<div>
+						<ul>
+						<li className='text-[2rem]'>huyhoangdo@contact.thinkmay.net</li>
+						<li className='text-[2rem]'>Hoa Lac, Ha Noi, Viet Nam</li>
+						</ul>
+					</div>
+
 				</div>
 			</div>
 		</div>
