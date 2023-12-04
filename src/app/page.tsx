@@ -44,9 +44,9 @@ export default function Home() {
         <div className='information'>
             <header className='ctnHeader '>
               <div className='header contentMaxWidth'>
-                <div>
+                <a href='/' className='block'>
                   <Image alt='logo' priority={true} width={120} height={120} src={'/logo.png'} />
-                </div>
+                </a>
 
 
                 <ul className="right">
@@ -120,7 +120,7 @@ export default function Home() {
                         <span className='specialText'>ultra low latency?</span>
                       </p>
 
-                      <a className='mt-[16px] btn-help' href="mailto:huyhoangdo@contact.thinkmay.net">Let us help you</a>
+                      <a className='mt-[16px] btn-help' href="/contact">Let us help you</a>
                     </div>
                   </div>
                   <div className='content section'>
@@ -132,7 +132,7 @@ export default function Home() {
                         <li className='text'>Hypervisor?</li>
                         <li className='text'>Data center? </li>
                         <li className='text'>KVM or Hyper-V?</li>
-                        <a className='mt-[16px] btn-help' href="mailto:huyhoangdo@contact.thinkmay.net">Let us help you</a>
+                        <a className='mt-[16px] btn-help' href="/contact">Let us help you</a>
                       </ul>
                     </div>
                   </div>
