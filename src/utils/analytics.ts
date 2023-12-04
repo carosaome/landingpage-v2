@@ -65,9 +65,11 @@ export async function UserEvents({content}:{content:string}) {
 
 
 export async function UserSession(email?:string) {
-    const session = localStorage.getItem('SESSION_ID')
-    const location = await(await fetch(`http://ip-api.com/json/${(await (await fetch('https://icanhazip.com/')).text()).split('\n').at(0)}`)).json()
-
+    const session = crypto.randomUUID()
+    localStorage.setItem('SESSION_ID',session)
+    let location = {}
+    try { location = await(await fetch(`http://ip-api.com/json/${(await (await fetch('https://icanhazip.com/')).text()).split('\n').at(0)}`)).json() } 
+    catch {}
 
     await createClient(sb.url,sb.key)
         .from('generic_events')
@@ -79,7 +81,7 @@ export async function UserSession(email?:string) {
                 os: getOS(),
                 email: email ?? 'unknown'
             },
-            name: `new session`,
+            name: `new session ${window.location.href}`,
             type: 'ANALYTICS',
         })
 }

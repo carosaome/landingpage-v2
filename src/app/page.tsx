@@ -14,7 +14,6 @@ export default function Home() {
   const [selection,setSelection] = useState<Selection>('ENTERPRISE')
 
   useEffect(() => {
-    localStorage.setItem('SESSION_ID',crypto.randomUUID())
     UserSession()
 
     const result = localStorage.getItem('SELECTION')
