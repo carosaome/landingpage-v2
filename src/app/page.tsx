@@ -4,10 +4,9 @@ import Image from 'next/image'
 import './page.scss'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { UserEvents, UserSession } from '@/utils/analytics'
+import { REDIRECT_PAGE, UserEvents, UserSession } from '@/utils/analytics'
 
 type Selection = 'GAMING' | 'ENTERPRISE' | 'UNKOWN'
-const REDIRECT_PAGE = "https://app.thinkmay.net/"
 
 export default function Home() {
   const router = useRouter()

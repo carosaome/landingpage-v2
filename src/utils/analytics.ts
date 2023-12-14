@@ -3,6 +3,8 @@ export type OS = "Mac OS" | "iOS" | "Windows" | "Linux" | "Android" | "unknown"
 export type Platform = 'desktop' | 'mobile'
 export type Browser = 'Opera' | 'IE' | 'Firefox' | 'Safari' | 'Chrome' | 'Edge' | 'unknown'
 
+export const REDIRECT_PAGE = "https://dev-thinkmay.netlify.app"
+
 export function getOS() : OS {
     let OSName : OS = "unknown";
 

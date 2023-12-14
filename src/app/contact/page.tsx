@@ -3,7 +3,7 @@ import Image from 'next/image'
 import './contact.scss'
 import { useEffect, useRef } from 'react'
 import sweetalert from 'sweetalert2'
-import { ContactUS, UserEvents } from '@/utils/analytics'
+import { ContactUS, REDIRECT_PAGE, UserEvents } from '@/utils/analytics'
 
 
 export default function Contact() {
@@ -43,7 +43,7 @@ export default function Contact() {
 						<li className='item'><a href="/#casestudy">Case study</a></li>
 						<li className='item'>
 							<a
-								href='https://app.thinkmay.net/'
+								href={REDIRECT_PAGE}
 								className='btn-gaming'
 							>Gaming</a>
 						</li>
